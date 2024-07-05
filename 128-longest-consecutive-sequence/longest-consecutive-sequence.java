@@ -20,10 +20,7 @@ class Solution {
         int first = pq.poll();
         int count = 1;
         int min = -1*(int)(1e9+1);
-        /*while (!pq.isEmpty()) { 
-            int x = pq.poll();
-            System.out.print(x+" ");
-        }*/
+
         while (!pq.isEmpty()) { 
             int x = pq.poll();
             if(first+1 == x){
