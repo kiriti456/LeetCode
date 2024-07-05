@@ -17,7 +17,6 @@ class Solution {
                     int num = Character.getNumericValue(board[i][j]);
                     int boxIndex = (i / 3) * 3 + (j / 3);
 
-
                     if (!rows[i].add(num) || !cols[j].add(num) || !boxes[boxIndex].add(num)) {
                         return false;
                     }
