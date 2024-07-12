@@ -12,6 +12,7 @@ class Solution {
             return (int)Math.abs(x)==0?0:myPow(x,n);
         if(n<=Integer.MIN_VALUE)
             return (int)Math.abs(x)>1?0:myPow(x,n);
+
         if(n==0)
             return 1;
         if(n==1)
