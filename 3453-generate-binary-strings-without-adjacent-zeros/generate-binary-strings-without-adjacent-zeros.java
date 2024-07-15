@@ -2,7 +2,6 @@ class Solution {
 
     public List<String> adj(int n, int zero, int one, int idx,String ans, List<String> res){
         if(idx==n){
-            //List<String> res = new ArrayList<>();
             res.add(ans);
             return res;
         }
