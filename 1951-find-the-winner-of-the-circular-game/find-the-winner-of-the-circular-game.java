@@ -2,7 +2,6 @@ class Solution {
 
     public int lastOne(List<Integer> s, int n, int k, int ind){
         if(s.size()==1){
-            System.out.println(s);
             return s.get(0);
         }
         ind = ((ind+k-1)%s.size());
