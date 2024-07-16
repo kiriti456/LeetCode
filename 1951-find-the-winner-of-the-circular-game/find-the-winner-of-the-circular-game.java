@@ -6,7 +6,7 @@ class Solution {
         }
         ind = ((ind+k-1)%s.size());
         s.remove(ind);
-        return lastOne(new ArrayList<>(s), n-1, k, ind);
+        return lastOne(s, n-1, k, ind);
     }
 
     public int findTheWinner(int n, int k) {
