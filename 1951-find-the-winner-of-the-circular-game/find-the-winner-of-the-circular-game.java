@@ -4,7 +4,7 @@ class Solution {
         if(s.size()==1){
             return s.get(0);
         }
-        ind = ((ind+k-1)%s.size());
+        ind = (ind+k-1)%s.size();
         s.remove(ind);
         return lastOne(s, k, ind);
     }
