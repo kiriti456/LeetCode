@@ -5,10 +5,9 @@ class Solution {
             System.out.println(s);
             return s.get(0);
         }
-        if(ind+k-1>=s.size())
-            ind = ((ind+k-1)%s.size())-k+1;
-        s.remove(ind+k-1);
-        return lastOne(new ArrayList<>(s), n-1, k, ind+k-1);
+        ind = ((ind+k-1)%s.size());
+        s.remove(ind);
+        return lastOne(new ArrayList<>(s), n-1, k, ind);
     }
 
     public int findTheWinner(int n, int k) {
