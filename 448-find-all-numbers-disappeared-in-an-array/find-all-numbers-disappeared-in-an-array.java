@@ -3,10 +3,9 @@ class Solution {
         List<Integer> ans = new ArrayList<Integer>();
         int i = 0;
         while(i < nums.length){
-            int correct = nums[i] - 1;
-            if(nums[i] != nums[correct]){
-                int tmp = nums[correct];
-                nums[correct] = nums[i];
+            if(nums[i] != nums[nums[i] - 1]){
+                int tmp = nums[nums[i] - 1];
+                nums[nums[i] - 1] = nums[i];
                 nums[i] = tmp;
             }
             else
