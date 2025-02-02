@@ -3,11 +3,11 @@ class Solution {
         int i = 0, j = s.length()-1;
         s = s.toLowerCase();
         while(i <= j){
-            if(!(Character.isAlphabetic(s.charAt(i)) || Character.isDigit(s.charAt(i)))){
+            if (!Character.isLetterOrDigit(s.charAt(i))){
                 i++;
                 continue;
             }
-            if(!(Character.isAlphabetic(s.charAt(j)) || Character.isDigit(s.charAt(j)))){
+            if(!Character.isLetterOrDigit(s.charAt(j))){
                 j--;
                 continue;
             }
