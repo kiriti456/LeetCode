@@ -3,15 +3,16 @@ class Solution {
         int i = 0, j = s.length()-1;
         s = s.toLowerCase();
         while(i <= j){
-            if (!Character.isLetterOrDigit(s.charAt(i))){
+            char ci = s.charAt(i), cj = s.charAt(j);
+            if (!Character.isLetterOrDigit(ci)){
                 i++;
                 continue;
             }
-            if(!Character.isLetterOrDigit(s.charAt(j))){
+            if(!Character.isLetterOrDigit(cj)){
                 j--;
                 continue;
             }
-            if(s.charAt(i) != s.charAt(j)){
+            if(ci != cj){
                 return false;
             }
             else{
