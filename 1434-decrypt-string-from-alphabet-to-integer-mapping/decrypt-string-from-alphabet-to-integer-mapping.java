@@ -7,9 +7,9 @@ class Solution {
             }
         }
         for(int i=0;i<s.length();i++){
-            if(s.charAt(i) <= '9' && s.charAt(i)>='1'){
-                s = s.replace(s.charAt(i), (char)(Integer.parseInt(s.charAt(i)
-                +"") + 96));
+            char cr = s.charAt(i);
+            if( cr<= '9' && cr>='1'){
+                s = s.replace(cr, (char)(Integer.parseInt(cr+"") + 96));
             }
         }
         return s;
