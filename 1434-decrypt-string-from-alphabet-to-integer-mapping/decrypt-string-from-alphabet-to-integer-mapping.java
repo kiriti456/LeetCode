@@ -4,9 +4,7 @@ class Solution {
             if(s.charAt(i) == '#'){
                 String x = s.charAt(i-2)+""+s.charAt(i-1);
                 int c = (Integer.parseInt(x) + 96);
-                String old = (x+"#"), newS = ((char)c+"");
-                System.out.println(old+" - "+newS);
-                s = s.replace(old, newS);
+                s = s.replaceAll((x+"#"), ((char)c+""));
             }
         }
         for(int i=0;i<s.length();i++){
