@@ -3,8 +3,7 @@ class Solution {
         for(int i=0;i<s.length();i++){
             if(s.charAt(i) == '#'){
                 String x = s.charAt(i-2)+""+s.charAt(i-1);
-                int c = (Integer.parseInt(x) + 96);
-                s = s.replaceAll((x+"#"), ((char)c+""));
+                s = s.replaceAll((x+"#"), ((char)(Integer.parseInt(x) + 96)+""));
             }
         }
         for(int i=0;i<s.length();i++){
