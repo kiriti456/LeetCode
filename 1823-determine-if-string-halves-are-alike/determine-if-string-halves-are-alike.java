@@ -1,29 +1,16 @@
 class Solution {
     public boolean halvesAreAlike(String s) {
-        String s1 = (s.substring(0, 1+(s.length() - 1) / 2)
-                .replace("a", "")
-                .replace("e", "")
-                .replace("i", "")
-                .replace("o", "")
-                .replace("u", "")
-                .replace("A", "")
-                .replace("E", "")
-                .replace("I", "")
-                .replace("O", "")
-                .replace("U", ""));
-        String s2 = (s.substring(1 + (s.length() - 1) / 2, s.length())
-                .replace("a", "")
-                .replace("e", "")
-                .replace("i", "")
-                .replace("o", "")
-                .replace("u", "")
-                .replace("A", "")
-                .replace("E", "")
-                .replace("I", "")
-                .replace("O", "")
-                .replace("U", ""));
-                System.out.println(s1 +" "+s2);
-        System.out.println("oooooooooooottttttttttt".replace("x",""));
-        return s1.length() == s2.length();
+        int c = 0;
+        for(int i=0;i<s.length();i++){
+            if(i <= (s.length()-1)/2){
+                if(s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o' || s.charAt(i) == 'u' || s.charAt(i) == 'A' || s.charAt(i) == 'E' || s.charAt(i) == 'I' || s.charAt(i) == 'O' || s.charAt(i) == 'U')
+                    c++;
+            }
+            else{
+                if(s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o' || s.charAt(i) == 'u' || s.charAt(i) == 'A' || s.charAt(i) == 'E' || s.charAt(i) == 'I' || s.charAt(i) == 'O' || s.charAt(i) == 'U')
+                    c--;
+            }
+        }
+        return c == 0 ? true:false;
     }
 }
