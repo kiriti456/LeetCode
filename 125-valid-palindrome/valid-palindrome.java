@@ -14,10 +14,8 @@ class Solution {
             if(s.charAt(i) != s.charAt(j)){
                 return false;
             }
-            else{
-                i++;
-                j--;
-            }
+            i++;
+            j--;
         }
         return true;
     }
