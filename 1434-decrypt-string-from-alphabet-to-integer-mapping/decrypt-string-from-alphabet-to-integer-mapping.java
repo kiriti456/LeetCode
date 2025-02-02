@@ -6,7 +6,7 @@ class Solution {
                 int c = (Integer.parseInt(x) + 96);
                 String old = (x+"#"), newS = ((char)c+"");
                 System.out.println(old+" - "+newS);
-                s = s.replaceAll(old, newS);
+                s = s.replace(old, newS);
             }
         }
         for(int i=0;i<s.length();i++){
