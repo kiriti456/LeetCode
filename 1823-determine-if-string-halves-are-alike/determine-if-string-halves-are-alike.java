@@ -1,9 +1,9 @@
 class Solution {
     public boolean halvesAreAlike(String s) {
-        int c1 = 0;
-        for(int i=0;i<s.length();i++){
+        int c1 = 0, len = s.length();
+        for(int i=0;i<len;i++){
             char c = s.charAt(i);
-            if(i <= (s.length()-1)/2){
+            if(i <= (len-1)/2){
                 if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
                     c1++;
             }
