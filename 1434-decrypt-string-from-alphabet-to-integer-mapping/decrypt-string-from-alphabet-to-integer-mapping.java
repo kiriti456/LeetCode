@@ -1,17 +1,18 @@
 class Solution {
     public String freqAlphabets(String s) {
-        for(int i=0;i<s.length();i++){
-            if(s.charAt(i) == '#'){
-                String x = s.charAt(i-2)+""+s.charAt(i-1);
-                s = s.replaceAll((x+"#"), ((char)(Integer.parseInt(x) + 96)+""));
+        String result = "";
+        int i = 0;
+        while (i < s.length()) {
+            if (i + 2 < s.length() && s.charAt(i + 2) == '#') {
+                int num = Integer.parseInt(s.substring(i, i + 2));
+                result += ((char) (num + 96));
+                i += 3;
+            } else {
+                int num = s.charAt(i) - '0';
+                result += ((char) (num + 96));
+                i++;
             }
         }
-        for(int i=0;i<s.length();i++){
-            char cr = s.charAt(i);
-            if( cr<= '9' && cr>='1'){
-                s = s.replace(cr, (char)(Integer.parseInt(cr+"") + 96));
-            }
-        }
-        return s;
+        return result;
     }
 }
