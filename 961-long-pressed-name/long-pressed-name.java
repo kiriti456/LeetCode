@@ -4,8 +4,6 @@ class Solution {
         int j = typed.length()-1;
         if(name.charAt(0) != typed.charAt(0) || name.charAt(i) != typed.charAt(j))
             return false;
-        if(i>j)
-            return false;
         while(i >= 0 && j>=0 ){
             if(name.charAt(i) == typed.charAt(j)){
                 i--;
